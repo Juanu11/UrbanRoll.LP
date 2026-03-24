@@ -1,21 +1,18 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, Linking } from 'react-native';
 
 export default function WhatsAppButton() {
-  const openWA = () => Linking.openURL('https://wa.me/573000000000'); // Cambia por tu número
+  const mensaje = "Hola UrbanRoll! Quiero más info sobre los skates y scooters.";
+  const url = "https://wa.me/573000000000?text=" + encodeURIComponent(mensaje); // Cambia el número por el tuyo
 
   return (
-    <TouchableOpacity style={styles.fab} onPress={openWA}>
-      <Text style={styles.icon}>WA</Text>
-    </TouchableOpacity>
+    <a href={url} target="_blank" rel="noreferrer" style={{
+      position: 'fixed', bottom: '30px', right: '30px',
+      background: '#25D366', color: 'white', width: '60px', height: '60px',
+      borderRadius: '50%', display: 'flex', justifyContent: 'center',
+      alignItems: 'center', fontSize: '30px', textDecoration: 'none',
+      boxShadow: '0 4px 10px rgba(0,0,0,0.3)', zIndex: 9999
+    }}>
+      <span role="img" aria-label="whatsapp">💬</span>
+    </a>
   );
 }
-const styles = StyleSheet.create({
-  fab: { 
-    position: 'absolute', bottom: 20, right: 20, 
-    backgroundColor: '#25D366', width: 60, height: 60, 
-    borderRadius: 30, justifyContent: 'center', alignItems: 'center',
-    elevation: 5, shadowColor: '#000', shadowOpacity: 0.3
-  },
-  icon: { color: '#fff', fontWeight: 'bold', fontSize: 18 }
-});

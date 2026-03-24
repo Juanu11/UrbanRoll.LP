@@ -1,16 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
 export default function Hero() {
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <View style={styles.hero}>
-      <Text style={styles.title}>DOMINA EL ASFALTO</Text>
-      <Text style={styles.subtitle}>Bogotá • Skates • Scooters</Text>
-    </View>
+    <section id="hero">
+      <div className="hero-content">
+        <p style={{color: 'var(--teal)', letterSpacing: '4px'}}>// SKATE · CIUDAD · LIBERTAD</p>
+        <h1 className="hero-title">RUEDA<br/><span className="hl">SIN</span><br/>LÍMITES</h1>
+        <div style={{display: 'flex', gap: '15px', marginTop: '30px'}}>
+          <button onClick={() => handleScroll('beneficios')} className="btn-main">VER MÁS</button>
+        </div>
+      </div>
+    </section>
   );
 }
-const styles = StyleSheet.create({
-  hero: { height: 400, backgroundColor: '#000', justifyContent: 'center', alignItems: 'center', padding: 20 },
-  title: { color: '#fff', fontSize: 40, fontWeight: 'bold', textAlign: 'center' },
-  subtitle: { color: '#fbbf24', fontSize: 18, marginTop: 10 }
-});

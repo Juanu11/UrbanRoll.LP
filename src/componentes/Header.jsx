@@ -1,14 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
 export default function Header() {
   return (
-    <View style={styles.header}>
-      <Text style={styles.logo}>URBANROLL</Text>
-    </View>
+    <header className="header">
+      <div className="logo-link">
+        <span style={{ fontFamily: 'Permanent Marker', color: '#70CBC2', fontSize: '1.8rem' }}>URBANROLL</span>
+      </div>
+      <button className="btn-register">REGISTRARSE</button>
+    </header>
   );
 }
-const styles = StyleSheet.create({
-  header: { height: 60, backgroundColor: '#fbbf24', justifyContent: 'center', alignItems: 'center' },
-  logo: { fontWeight: '900', fontSize: 20, color: '#000' }
-});
