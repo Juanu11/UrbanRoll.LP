@@ -25,7 +25,25 @@ body {
   backdrop-filter: blur(10px);
   display: flex; justify-content: space-between; align-items: center;
   padding: 0 5%; z-index: 1000;
-  border-bottom: 1px solid rgba(112,203,194,0.2);
+ 
+}
+
+.conocenos {
+  background: transparent;
+  border: 2px solid #70CBC2;
+  color: #70CBC2;
+  padding: 8px 22px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.conocenos:hover {
+  background: #70CBC2;
+  color: #05172F;
 }
 
 /* HERO SECTION */
@@ -33,7 +51,7 @@ body {
   min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
   padding: 0 5%;
-  background: radial-gradient(circle at center, #0a2a4a 0%, var(--navy) 100%);
+  background: radial-gradient(circle at center, #acb9c5 0%, var(--navy) 100%);
 }
 
 .hero-title {
