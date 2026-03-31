@@ -1,12 +1,21 @@
 import React from 'react';
 import "../../styles/App.css";
+import Logo from '../assets/1F.svg';
 
 export default function Header() {
   return (
     <header className="header">
-      <div className="logo-link">
-        <span style={{ fontFamily: 'Permanent Marker', color: '#70CBC2', fontSize: '1.8rem' }}>URBANROLL</span>
-      </div>
+      <a
+        href="#hero"
+        className="logo-link"
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      >
+        <img src={Logo} alt="UrbanRoll Logo" className="logo-img" />
+        <span className="logo-text">URBANROLL</span>
+      </a>
       <button
         className="conocenos"
         onClick={() => document.getElementById('cta-section').scrollIntoView({ behavior: 'smooth' })}
