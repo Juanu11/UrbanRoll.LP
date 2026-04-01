@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Testimonios() {
   const reviews = [
-    { nombre: "Camilo R.", texto: "La tabla de arce es de otro nivel, el pop que tiene es increíble para los trucos en el Parkway.", emoji: "🛹" },
-    { nombre: "Andrea V.", texto: "El scooter eléctrico me salvó la vida con el trancón de la 80. ¡Llega súper rápido!", emoji: "⚡" }
+    { nombre: "Julian Maldonado", texto: "La tabla de arce es de otro nivel, el pop que tiene es increíble para los trucos en el Parkway.", emoji: "🛹" },
+    { nombre: "Johan Torres", texto: "El scooter eléctrico me salvó la vida con el trancón de la 80. ¡Llega súper rápido!", emoji: "⚡" }
   ];
 
   return (

@@ -244,3 +244,30 @@ section {
     justify-content: center;
   }
 }
+/* ===== TÍTULO HERO CON EFECTO OUTLINE ===== */
+.hero-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: clamp(3rem, 7vw, 7rem);
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+/* "RUEDA" — blanco sólido normal */
+.hero-title-solid {
+  color: #f0f4f8;
+  display: block;
+}
+
+/* "SIN" — teal sólido */
+.hero-title-teal {
+  color: #70CBC2;
+  display: block;
+}
+
+/* "LÍMITES" — solo outline, sin relleno */
+.hero-title-outline {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 2.5px #70CBC2;
+  text-stroke: 2.5px #70CBC2;
+}
